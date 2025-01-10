@@ -25,7 +25,7 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		sum += a[i];
-		if (mp.count(sum))
+		if (mp.count(sum) || sum == 0)
 		{
 			cout << "1";
 			return 0;
