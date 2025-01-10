@@ -15,7 +15,7 @@ int main()
 	cin.tie(NULL);
 	int n, k;
 	cin >> n >> k;
-	vector<int> a(n);
+	int a[n];
 	for (int i = 0; i < n; i++)
 	{
 		cin >> a[i];
@@ -29,7 +29,7 @@ int main()
 	for (int i = k; i < n; i++)
 	{
 		se.insert(a[i]);
-		se.erase(se.find(a[i] - k));
+		se.erase(se.find(a[i - k]));
 		cout << *se.begin() << " " << *se.rbegin() << endl;
 	}	
 }
